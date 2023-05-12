@@ -1,0 +1,37 @@
+bottomNavigationBar: BottomNavigationBar(
+            currentIndex: pageIx,
+            onTap: (i) => pageController.animateToPage(i,
+                duration: const Duration(milliseconds: 400),
+                curve: Curves.easeInOut),
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.format_align_left),
+                label: "LEFT",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.format_align_center),
+                label: "CENTER",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.format_align_right),
+                label: "RIGHT",
+              ),
+            ]),
+
+
+
+
+
+Positioning
+position == TimelinePosition.Left
+          ? ClampingScrollPhysics()
+          : BouncingScrollPhysics()
+
+
+
+
+List<Widget> pages = [
+      timelineModel(TimelinePosition.Left),
+      timelineModel(TimelinePosition.Center),
+      timelineModel(TimelinePosition.Right)
+    ];
